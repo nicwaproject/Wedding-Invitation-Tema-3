@@ -1,0 +1,822 @@
+body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* .............COVER............... */
+.cover {
+    background-image: url('gallery1.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 100vh;
+    text-align: right;
+}
+
+.cover .guest-name {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: #305968;
+}
+
+.cover button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #305968;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cover button:hover {
+    background-color: #BDBEBF;
+    color: black;
+}
+
+.invitation-content {
+    display: none;
+}
+
+/* ..............NAVIGASI.................. */
+
+/* NAVIGASI */
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #BDBEBF;
+    z-index: 999;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Jarak antar ikon */
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #305968;
+    text-decoration: none;
+    font-size: 24px; /* Ukuran ikon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #305968; /* Warna teks saat hover */
+}
+
+
+/* ..................SEPERATOR............. */
+.separator {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 5px 0;
+}
+
+.separator::before, 
+.separator::after {
+    content: '';
+    height: 1px; /* Membuat garis horizontal */
+    flex-grow: 1;
+    width: 180px;
+    background-color: white;
+}
+
+/* ...............  ANIMATION............... */
+.fade-in {
+    opacity: 0;
+    transition: opacity 5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.fade-slide {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.fade-slide.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* .....................AUDIO CONTROL.................... */
+.audio-controls {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 999; /* Ensure it's above other content */
+    text-align: center;
+    display: none; /* Initially hide the button */
+}
+
+.play-btn {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* ..................SECTION............... */
+.section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 50px;
+    overflow-x: hidden;
+}
+
+/* Menambahkan overlay untuk memastikan teks terbaca di atas gambar */
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* Overlay gelap */
+    z-index: 1;
+}
+
+.section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* ................SECTION 1.................. */
+#section1 {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    text-align: right;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.wedding-info {
+    line-height: 1.2;
+}
+
+.wedding-of {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.bride-groom {
+    font-size: 5em;
+    margin: 0;
+    padding: 0;
+    color: #305968;
+}
+
+.wedding-date {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.quran-verse {
+    font-size: 1.5em;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+.ayat {
+    font-family: "Rakkas", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* ..................SECTION 2..................... */
+#section2 {
+    background-image: url('gallery9.jpeg');
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-align: right;
+    padding: 20px;
+}
+
+#section2 h2 {
+    color: #305968;
+    margin: 5px 0;
+    padding: 0;
+    font-size: 2em;
+}
+
+#section2 h3 {
+    margin: 0;
+    padding: 0;
+}
+
+#section2 p {
+    line-height: 0.5;
+    margin: 10px 0;
+    font-size: 0.8em;
+}
+
+.anakke {
+    font-weight: 600;
+}
+
+/* ..............SECTION 3............. */
+#section3 {
+    background-image: url('gallery8.jpeg');
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-align: left;
+    padding: 20px;
+}
+
+#section3 h2 {
+    color: #305968;
+    margin: 5px 0;
+    padding: 0;
+    font-size: 2em;
+}
+
+#section3 h3 {
+    margin: 0;
+    padding: 0;
+}
+
+#section3 p {
+    line-height: 0.5;
+    margin: 10px 0;
+    font-size: 0.8em;
+}
+
+/* ...............SECTION 4............... */
+#section4 {
+    background-image: url('gallery4.jpeg');
+}
+
+#countdown {
+    font-size: 0.8em;
+}
+
+#countdown h3 {
+    margin-bottom: 50px;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Jarak antar item countdown */
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #305968;
+    border-radius: 50%;
+    width: 55px;
+    padding: 5px;
+}
+
+.countdown-item div {
+    padding: 2px;
+}
+
+.countdown-item #days,
+.countdown-item #hours,
+.countdown-item #minutes,
+.countdown-item #seconds {
+    font-size: 2em; /* Ukuran angka */
+}
+
+.countdown-item .label {
+    font-size: 0.8em; /* Ukuran keterangan */
+    color: white;
+}
+
+/* ..................SECTION 5 WEDDING DETAILS................... */ 
+#section5 {
+    background-image: url('gallery5.jpeg');
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto; /* Mengisi tinggi layar penuh */
+    overflow-y: hidden;
+}
+        
+.konten5 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.konten5 h3 {
+    color: #305968;
+    font-size: 1.6em;
+}
+
+.konten5 h4 {
+    text-decoration: underline;
+    font-size: 1.3em;
+}
+
+.konten5 p {
+    font-size: 0.8em;
+}
+        
+.Judul {
+    text-align: center;
+    margin-bottom: 20px; /* Jarak antara judul dan akad */
+}
+        
+.Akad, .Resepsi {
+    width: 100%;
+    padding: 0 20px; /* Memberi ruang di kiri dan kanan */
+}
+        
+.Akad {
+    margin-bottom: 20px; /* Jarak antara akad dan resepsi */
+    justify-content: flex-end; /* Posisi di kanan */
+    text-align: right;
+}
+        
+.Resepsi {
+    justify-content: flex-start; /* Posisi di kiri */
+    text-align: left;
+}
+        
+h2, h3, h4, p {
+    margin: 5px 0; /* Mengatur margin untuk elemen teks */
+}
+
+.location-button {
+    margin-top: 50px;
+    padding: 5px 16px;
+    background-color: #305968;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.lokasi {
+    margin-bottom: 20px;
+}
+        
+    
+
+/* ..............SECTION 6 GALLERY.................. */
+#section6 {
+    background-image: url('gallery6.jpeg');
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Masonry Gallery */
+.masonry-gallery {
+    column-count: 3;
+    column-gap: 15px;
+  }
+  
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 15px;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Lightbox Modal */
+  .lightbox {
+    display: none; /* Hide by default */
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .close:hover {
+    color: #bbb;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+    user-select: none;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+
+/* ..............SECTION 7 RSVP & MESSAGES............ */
+#section7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('gallery7.jpeg');
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: #122620;
+    color: white;
+    height: auto;
+}
+
+#section7 h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 350px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea, select {
+    width: 100%;
+    min-width: 350px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em; /* Atau gunakan 16px jika lebih konsisten */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+select {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 20px;
+    font-size: 0.8em;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2c5c4d;
+    color: white;
+}
+
+/* TAMPILAN PESAN*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+}
+
+.message-box, .attendance-box {
+    width: 100%;
+    min-width: 300px;
+    max-height: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow-y: auto; /* Tambahkan scroll vertikal */
+}
+
+.message-box h3, .attendance-box h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    color: #122620;
+}
+
+.message-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(48, 89, 104, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-status {
+    font-size: 0.9em;
+    color: white;
+    margin-top: 15px;
+    font-style: italic;
+    background-color: white;
+    color: #122620;
+    border-radius: 5px;
+}
+
+.message-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.4em;
+}
+
+.message-item p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.attendance-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.attendance-item {
+    width: 20%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(48, 89, 104, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-number {
+    font-size: 2em;
+    font-weight: bold;
+    display: block;
+}
+
+.attendance-label {
+    font-size: 0.7em;
+    margin-top: 5px;
+}
+
+
+
+
+/* CSS untuk mengganti font placeholder */
+#name::placeholder,
+#message::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px; /* Ganti dengan ukuran font yang diinginkan */
+    color: #888; /* Ganti dengan warna yang diinginkan */
+}
+/* CSS untuk mengganti font input */
+#name,
+#message {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px; /* Ganti dengan ukuran font yang diinginkan */
+    color: #333; /* Ganti dengan warna yang diinginkan */
+}
+
+/* ................SECTION 8 ....................... */
+
+#section8 {
+    background-image: url('gallery1.jpeg');
+}
+
+/* Section 8 Styling */
+#wedding-gift {
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.wedding-gift h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.wedding-gift p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.bank-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#account-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#copy-button {
+    background-color: #305968;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#copy-button:hover {
+    background-color: #BDBEBF;
+    color: #305968;
+}
+
+
+/* Section 9 Styling */
+#section9 {
+    background-image: url('gallery2.jpeg');
+    text-align: center;
+    padding: 40px 20px;
+    color: #fff;
+    background-color: #333; /* Warna latar belakang yang berbeda untuk kontras */
+    box-sizing: border-box;
+}
+
+.thank-you h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.thank-you .bride-groom {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.thank-you-message {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.social-links {
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+.company-logo {
+    margin-top: 30px;
+}
+
+.company-logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Responsif untuk teks agar tetap terbaca di perangkat kecil */
+@media (max-width: 768px) {
+    .section {
+        padding: 10px;
+    }
+
+    .cover h1 {
+        font-size: 2em;
+    }
+
+    .cover .guest-name {
+        font-size: 1.2em;
+    }
+
+    .cover button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    #section5 {
+        height: 100vh;
+    }
+    .konten5 {
+        justify-content: space-around; /* Tetap gunakan space-evenly */
+        height: 80%; /* Pastikan konten memenuhi seluruh tinggi */
+    }
+
+    .section6 {
+        height: 100vh;
+    }
+}
